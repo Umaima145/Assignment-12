@@ -13,7 +13,7 @@ const LoginScreen = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user && user.email === email && user.password === password) {
       localStorage.setItem('isAuthenticated', 'true');
-      window.location.href = '/dashboard'; 
+      window.location.href = '/dashboard';
     } else {
       alert('Invalid credentials');
     }

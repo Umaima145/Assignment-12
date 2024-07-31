@@ -14,8 +14,8 @@ const SignupScreen = () => {
     e.preventDefault();
     const user = { fullName, email, password };
     localStorage.setItem('user', JSON.stringify(user));
-    localStorage.setItem('isAuthenticated', 'true');
-    window.location.href = '/dashboard'; 
+    localStorage.setItem('isAuthenticated', 'false');
+    window.location.href = '/login';
   };
 
   return (
@@ -53,7 +53,7 @@ const SignupScreen = () => {
           <IoIosLock />
         </div>
         <button type="submit" className="submit">Signup Here</button>
-        <p className="footer">Already have an account  <Link to="/login" className="link">Login</Link></p>
+        <p className="footer">Already have an account <Link to="/login" className="link">Login</Link></p>
       </form>
       <div className="banner">
         <h1 className="wel_text">Welcome!</h1><br />
